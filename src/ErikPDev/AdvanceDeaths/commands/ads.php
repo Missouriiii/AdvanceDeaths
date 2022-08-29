@@ -14,7 +14,7 @@ class ads extends Command implements PluginOwned {
 
 	public function __construct() {
 
-		parent::__construct("ads", "Get status for a player", translationContainer::translate("usage", false, []), ["advancedeaths"]);
+		parent::__construct("ads", "Find the stats of a player!", translationContainer::translate("usage", false, []), ["advancedeaths"]);
 		$this->setPermission("advancedeaths.use");
 
 	}
@@ -22,7 +22,7 @@ class ads extends Command implements PluginOwned {
 	public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
 
 		if (count($args) == 0) {
-			$sender->sendMessage("Usage: /ads (PlayerName)");
+			$sender->sendMessage("§l§5» §r§cUsage: /ads (PlayerName)");
 			return false;
 		}
 
